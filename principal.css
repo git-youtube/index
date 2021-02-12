@@ -1,0 +1,237 @@
+*{
+    margin: 0%;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 3fr 8fr 3fr;
+    grid-template-rows: 1fr 5fr;
+    background-color: #DBD8CA;
+}  
+
+/*Menu*/
+
+header{
+    background-color: #FA6D41;
+    display: flex; 
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 0.5% 0%;
+}
+
+header h1{
+    flex: 20%;
+    display: flex;
+    padding-left: 1%;
+    align-items: center;
+    color: white;
+    font-family:courier;
+}
+
+header img {
+    max-width: 100%;
+}
+
+nav {
+    flex: 80%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+nav a {
+    font-family:courier;
+    font-size: large;
+    text-decoration: none;
+    text-align: right;
+    color: white;
+    padding: 1%;
+    
+}
+
+.links {
+    width: 100%;
+}
+
+span {
+    color: #FA6D41;
+}
+
+.boton {
+    display: none;
+}
+
+/*Cuerpo*/
+
+main{
+    margin: 3% 2% 0% 2%;
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.fichas{
+    text-align: center;
+    padding: 3%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 3% 0% 3% 0%;
+    
+}
+
+.fichas a{
+    padding: 1%;
+    text-decoration: none;
+    color: white;
+    background-color: #FA6D41;
+    border: 5px solid white;
+   
+}
+
+#imagen img {
+    width: 75%;
+    border: 5px solid black;
+}
+
+#parrafos{
+    text-align: justify;
+    font-size: large;
+    font-family:courier;
+
+}
+
+/*Huellas laterales*/
+
+.huellas {
+    background-image: url("principal/Huellas.png");
+    background-size: contain;
+}
+
+.huellas #derecha {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.huellas #izquierda {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+header img{
+    width: 18%; 
+    height: 80%; 
+}
+
+.map{
+    border:5px solid white;  
+}
+
+/* Teléfonos */
+@media (max-width: 600px){
+
+    header{
+        padding: 2%;
+
+    }
+
+    header h1{
+        font-size: small;
+
+    }
+
+    header img{
+        max-width: 100%; 
+        height: 100%;
+    }
+
+    nav {
+      font-size: small;
+    }
+
+    #parrafos{
+        font-size: small;
+    }
+    h2 {
+        font-size: large;
+    }
+
+    .fichas{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .fichas a{
+        padding: 2%;
+        border:2px solid white;
+        margin: 2% 1%;
+
+    }
+
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .links {
+    position: relative;
+    width: 100%;
+  }
+  
+  .menu a {
+    padding-bottom: 2%;
+    text-decoration: none;
+    font-size: xx-large;
+    font-family: Oswald;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+  }
+  
+  .menu .boton {
+    position: absolute;
+    top: 0%;
+    right: 3%;
+    font-size: 400%;
+  }
+
+  header h1 {
+      font-size: xx-large;
+  }
+
+  span {
+      font-size: xx-large;
+      color: white;
+      padding: 0% 5%;
+      font-size: xx-large;
+      cursor: pointer;
+      margin: auto;
+      padding-bottom: 1%;
+    }
+
+    .menu a:hover, header a:focus {
+        color: #FA6D41;
+        text-decoration: none;
+    }
+
+}
